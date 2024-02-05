@@ -1,18 +1,10 @@
 const pg = require("pg");
-
+require("dotenv").config();
 const db = new pg.Client({
     user: "postgres",
     host: "localhost",
-    password: "Root@123",
+    password: process.env.PG_PASSWORD,
     database: "openInApp",
     port: 5432
 });
-// let connectionPool = new pgCon.Pool({
-//     user: "postgres",
-//     host: "localhost",
-//     password:"Root@123",
-//     database: "openInApp",
-//     port: 5432,
-//     max: 10
-// });
 module.exports = db;
