@@ -1,5 +1,6 @@
-const pg = require("pg");
 require("dotenv").config();
+const pg = require("pg");
+
 const db = new pg.Client({
     user: "postgres",
     host: "localhost",
